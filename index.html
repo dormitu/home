@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hugo Choquehuayta</title>
+
+    <style>
+        :root {
+            --verde-oscuro: #0f3b2e;
+            --verde-claro: #1a5c46;
+            --blanco: #ffffff;
+            --gris: #e8e8e8;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background-color: var(--verde-oscuro);
+            color: var(--blanco);
+        }
+
+        header {
+            padding: 60px 20px;
+            text-align: center;
+            background: linear-gradient(to bottom, #14503c, #0f3b2e);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 1.3rem;
+            opacity: 0.8;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 15px 0;
+            background-color: var(--verde-claro);
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: var(--blanco);
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        section {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 20px;
+            background-color: var(--blanco);
+            color: #222;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            color: var(--verde-oscuro);
+            margin-top: 0;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            background: var(--verde-oscuro);
+            color: var(--blanco);
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background-color: var(--verde-claro);
+            font-size: 0.9rem;
+        }
+
+        /* Botón flotante */
+        #btnArriba {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: var(--verde-claro);
+            padding: 12px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            transition: 0.3s;
+            color: white;
+            font-size: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+        }
+
+        #btnArriba:hover {
+            background: #0f3b2e;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>Hugo Choquehuayta</h1>
+        <p>Desarrollador | Creativo | Innovador</p>
+    </header>
+
+    <!-- Navegación -->
+    <nav>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <!-- Sección Sobre mí -->
+    <section id="sobre-mi">
+        <h2>Sobre mí</h2>
+        <p>
+            Hola, soy <strong>Hugo Choquehuayta</strong>, un apasionado de la tecnología, la creatividad 
+            y el desarrollo moderno. Me gusta aprender constantemente, 
+            crear soluciones eficientes y aportar ideas nuevas a cada proyecto.
+        </p>
+    </section>
+
+    <!-- Sección habilidades -->
+    <section id="habilidades">
+        <h2>Habilidades</h2>
+        <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Diseño Web</div>
+            <div class="skill">Resolución creativa de problemas</div>
+            <div class="skill">Trabajo en equipo</div>
+        </div>
+    </section>
+
+    <!-- Sección contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>¿Quieres comunicarte conmigo? Aquí tienes mis datos:</p>
+        <p><strong>Email:</strong> ejemplo@correo.com</p>
+        <p><strong>Teléfono:</strong> +51 999 999 999</p>
+    </section>
+
+    <!-- Botón flotante -->
+    <div id="btnArriba">↑</div>
+
+    <!-- Footer -->
+    <footer>
+        © 2025 Hugo Choquehuayta – Todos los derechos reservados
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const btnArriba = document.getElementById("btnArriba");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                btnArriba.style.display = "block";
+            } else {
+                btnArriba.style.display = "none";
+            }
+        });
+
+        btnArriba.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+
+</body>
+</html>
